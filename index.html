@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สตาร์ | พอร์ตโฟลิโอส่วนตัว</title>
+<meta name="description" content="พอร์ตโฟลิโอส่วนตัวของสตาร์ นักศึกษาเทคโนโลยีสารสนเทศ ผู้สนใจการพัฒนาเว็บไซต์และ UX/UI Design">
+
+<!-- Google Fonts: Trirong (Thai serif, elegant display) / Sarabun (Thai sans-serif, body) / Charmonman (Thai script, signature accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Trirong:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&family=Charmonman&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ambient decorative background blobs, purely visual, aria-hidden -->
+<div class="ambient" aria-hidden="true">
+  <span class="blob blob--1"></span>
+  <span class="blob blob--2"></span>
+  <span class="blob blob--3"></span>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="navbar" id="navbar">
+  <a href="#home" class="brand">S<span class="brand-dot">.</span></a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#home" class="nav-link active" data-nav>หน้าหลัก</a>
+    <a href="#about" class="nav-link" data-nav>เกี่ยวกับฉัน</a>
+    <a href="#education" class="nav-link" data-nav>การศึกษา</a>
+    <a href="#skills" class="nav-link" data-nav>ทักษะ</a>
+    <a href="#projects" class="nav-link" data-nav>ผลงาน</a>
+    <a href="#achievements" class="nav-link" data-nav>ความสำเร็จ</a>
+    <a href="#ai" class="nav-link" data-nav>AI</a>
+    <a href="#contact" class="nav-link nav-link--cta" data-nav>ติดต่อ</a>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ 1. HERO ============ -->
+  <section id="home" class="hero">
+    <div class="hero__text reveal">
+      <p class="eyebrow">PORTFOLIO&nbsp;/&nbsp;2026</p>
+      <h1 class="hero__name">สตาร์</h1>
+      <p class="hero__role">นักศึกษาเทคโนโลยีสารสนเทศ &middot; Web &amp; UX/UI</p>
+      <p class="hero__intro">
+        นักศึกษาด้านเทคโนโลยีสารสนเทศที่สนใจการพัฒนาเว็บไซต์ การออกแบบ UX/UI
+        และเทคโนโลยีดิจิทัล ชอบเรียนรู้สิ่งใหม่ ๆ และลงมือสร้างผลงานจริง
+        เพื่อฝึกฝนทักษะให้พร้อมสำหรับการทำงานในสายเทคโนโลยี
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">ดูผลงานของฉัน</a>
+        <a href="#contact" class="btn btn--ghost">ติดต่อฉัน</a>
+      </div>
+    </div>
+
+    <div class="hero__portrait reveal">
+      <div class="portrait-frame">
+        <img src="assets/profile.jpg" alt="ภาพโปรไฟล์ของสตาร์" class="portrait-img">
+      </div>
+      <span class="portrait-tag">สตาร์</span>
+    </div>
+  </section>
+
+  <!-- ============ 2. ABOUT / CONTACT INFO ============ -->
+  <section id="about" class="section">
+    <div class="section__head reveal">
+      <p class="eyebrow">ABOUT</p>
+      <h2>เกี่ยวกับฉัน</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="info-card">
+        <span class="info-icon" data-icon="user"></span>
+        <span class="info-label">ชื่อ</span>
+        <span class="info-value">สตาร์</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="user"></span>
+        <span class="info-label">ชื่อเล่น</span>
+        <span class="info-value">[ระบุชื่อเล่นของคุณ]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="cap"></span>
+        <span class="info-label">สถานะนักศึกษา</span>
+        <span class="info-value">กำลังศึกษาอยู่</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="book"></span>
+        <span class="info-label">สาขาวิชา</span>
+        <span class="info-value">เทคโนโลยีสารสนเทศ</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="building"></span>
+        <span class="info-label">มหาวิทยาลัย</span>
+        <span class="info-value">[ระบุชื่อมหาวิทยาลัยของคุณ]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="pin"></span>
+        <span class="info-label">จังหวัด</span>
+        <span class="info-value">[ระบุจังหวัดของคุณ]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="mail"></span>
+        <span class="info-label">Email</span>
+        <span class="info-value">[email@example.com]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="phone"></span>
+        <span class="info-label">Phone</span>
+        <span class="info-value">[0XX-XXX-XXXX]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="instagram"></span>
+        <span class="info-label">Instagram</span>
+        <span class="info-value">[@your_instagram]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="facebook"></span>
+        <span class="info-label">Facebook</span>
+        <span class="info-value">[Facebook ของคุณ]</span>
+      </div>
+      <div class="info-card">
+        <span class="info-icon" data-icon="github"></span>
+        <span class="info-label">GitHub</span>
+        <span class="info-value">[github.com/username]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. GOALS / PROFILE SUMMARY ============ -->
+  <section id="goals" class="section section--tinted">
+    <div class="goals-layout">
+      <div class="section__head section__head--left reveal">
+        <p class="eyebrow">OBJECTIVE</p>
+        <h2>เป้าหมายและ<br>ความสนใจ</h2>
+        <span class="rule"></span>
+      </div>
+      <div class="goals-text reveal">
+        <p>
+          ในฐานะนักศึกษาสาขาเทคโนโลยีสารสนเทศ ฉันสนใจในการพัฒนาเว็บไซต์และแอปพลิเคชัน
+          ควบคู่ไปกับการออกแบบประสบการณ์ผู้ใช้ (UX/UI) ที่ใช้งานง่ายและสวยงาม
+          ฉันเชื่อว่าการออกแบบที่ดีต้องเกิดจากความเข้าใจผู้ใช้จริง จึงตั้งใจฝึกฝน
+          ทักษะด้านการเขียนโปรแกรมและเทคโนโลยีอย่างต่อเนื่อง เพื่อสร้างผลิตภัณฑ์ดิจิทัล
+          ที่เป็นประโยชน์และตอบโจทย์การใช้งานจริง
+        </p>
+        <p>
+          นอกจากนี้ยังสนใจการนำ AI มาใช้เป็นเครื่องมือช่วยพัฒนางาน เพื่อเพิ่ม
+          ประสิทธิภาพในการทำงานและเปิดโลกทัศน์ด้านเทคโนโลยีใหม่ ๆ และตั้งเป้าหมาย
+          ที่จะได้ฝึกงานหรือทำงานร่วมกับทีมจริง เพื่อเก็บเกี่ยวประสบการณ์และพัฒนา
+          ตนเองให้พร้อมก้าวสู่สายงานเทคโนโลยีอย่างมั่นใจ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. EDUCATION TIMELINE ============ -->
+  <section id="education" class="section">
+    <div class="section__head reveal">
+      <p class="eyebrow">EDUCATION</p>
+      <h2>ประวัติการศึกษา</h2>
+      <span class="rule"></span>
+    </div>
+
+    <ol class="timeline reveal">
+      <li class="timeline__item">
+        <span class="timeline__dot"></span>
+        <span class="timeline__year">ปัจจุบัน</span>
+        <div class="timeline__card">
+          <h3>นักศึกษาระดับปริญญาตรี</h3>
+          <p>สาขาวิชาเทคโนโลยีสารสนเทศ</p>
+          <p class="timeline__place">มหาวิทยาลัย: [ระบุชื่อมหาวิทยาลัยของคุณ]</p>
+        </div>
+      </li>
+      <li class="timeline__item">
+        <span class="timeline__dot"></span>
+        <span class="timeline__year">[ปีที่จบ]</span>
+        <div class="timeline__card">
+          <h3>มัธยมศึกษาตอนปลาย</h3>
+          <p>แผนการเรียน: [ระบุแผนการเรียนของคุณ]</p>
+          <p class="timeline__place">โรงเรียน: [ระบุชื่อโรงเรียนของคุณ]</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 5. SKILLS ============ -->
+  <section id="skills" class="section section--tinted">
+    <div class="section__head reveal">
+      <p class="eyebrow">SKILLS</p>
+      <h2>ทักษะและความสามารถ</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="skills-grid reveal">
+      <div class="skill-category">
+        <h3>Programming &amp; Technology</h3>
+        <div class="skill-bar" data-level="60"><span class="skill-name">HTML</span><span class="skill-tag">ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="55"><span class="skill-name">CSS</span><span class="skill-tag">ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="45"><span class="skill-name">JavaScript</span><span class="skill-tag">เริ่มต้น–ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="40"><span class="skill-name">Database</span><span class="skill-tag">เริ่มต้น</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="45"><span class="skill-name">Basic Programming</span><span class="skill-tag">เริ่มต้น–ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="40"><span class="skill-name">System Analysis</span><span class="skill-tag">เริ่มต้น</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Design</h3>
+        <div class="skill-bar" data-level="55"><span class="skill-name">UX/UI Design</span><span class="skill-tag">ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="60"><span class="skill-name">Figma</span><span class="skill-tag">ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="50"><span class="skill-name">Wireframing</span><span class="skill-tag">ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+        <div class="skill-bar" data-level="45"><span class="skill-name">Prototyping</span><span class="skill-tag">เริ่มต้น–ปานกลาง</span><div class="skill-track"><div class="skill-fill"></div></div></div>
+      </div>
+
+      <div class="skill-category">
+        <h3>Other Skills</h3>
+        <div class="skill-badges">
+          <span class="badge">Microsoft Office</span>
+          <span class="badge">Presentation</span>
+          <span class="badge">Communication</span>
+          <span class="badge">Teamwork</span>
+          <span class="badge">Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. PROJECTS / EXPERIENCE ============ -->
+  <section id="projects" class="section">
+    <div class="section__head reveal">
+      <p class="eyebrow">WORK</p>
+      <h2>ประสบการณ์และผลงาน</h2>
+      <span class="rule"></span>
+    </div>
+
+    <!-- Featured project -->
+    <article class="project-feature reveal">
+      <div class="project-feature__info">
+        <p class="project-feature__label">ผลงานเด่น</p>
+        <h3>Cosmetic Mirror</h3>
+        <p class="project-feature__desc">
+          แนวคิดแพลตฟอร์มช้อปปิ้งเครื่องสำอางแบบดิจิทัล ที่ให้ผู้ใช้สามารถ
+          สำรวจสินค้าและทดลองเฉดสีเครื่องสำอางแบบเสมือนจริงก่อนตัดสินใจซื้อ
+        </p>
+
+        <ul class="feature-list">
+          <li>ระบบสมาชิกและเข้าสู่ระบบ</li>
+          <li>ค้นหาสินค้า</li>
+          <li>ตะกร้าสินค้า</li>
+          <li>ระบบสั่งซื้อ</li>
+          <li>ระบบชำระเงิน</li>
+          <li>ติดตามสถานะคำสั่งซื้อ</li>
+          <li>รีวิวสินค้า</li>
+          <li>ประวัติการสั่งซื้อ</li>
+          <li>Virtual Try-On</li>
+        </ul>
+
+        <div class="project-meta">
+          <div><span>บทบาท</span><p>[ระบุบทบาทของคุณในโครงการ]</p></div>
+          <div><span>เครื่องมือที่ใช้</span><p>[ระบุเครื่องมือ เช่น Figma, HTML/CSS/JS]</p></div>
+          <div><span>สิ่งที่ได้เรียนรู้</span><p>[ระบุสิ่งที่ได้เรียนรู้จากโครงการนี้]</p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Placeholder project cards -->
+    <div class="project-grid">
+      <article class="project-card reveal">
+        <p class="project-card__label">กิจกรรมในมหาวิทยาลัย</p>
+        <h4>[ชื่อกิจกรรม]</h4>
+        <p class="project-card__desc">[เพิ่มรายละเอียดกิจกรรมของคุณที่นี่]</p>
+        <div class="project-meta project-meta--compact">
+          <div><span>บทบาท</span><p>[ระบุบทบาท]</p></div>
+          <div><span>เครื่องมือที่ใช้</span><p>[ระบุเครื่องมือ]</p></div>
+          <div><span>สิ่งที่ได้เรียนรู้</span><p>[ระบุสิ่งที่ได้เรียนรู้]</p></div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-card__label">โครงการที่เคยทำ</p>
+        <h4>[ชื่อโครงการ]</h4>
+        <p class="project-card__desc">[เพิ่มรายละเอียดโครงการของคุณที่นี่]</p>
+        <div class="project-meta project-meta--compact">
+          <div><span>บทบาท</span><p>[ระบุบทบาท]</p></div>
+          <div><span>เครื่องมือที่ใช้</span><p>[ระบุเครื่องมือ]</p></div>
+          <div><span>สิ่งที่ได้เรียนรู้</span><p>[ระบุสิ่งที่ได้เรียนรู้]</p></div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-card__label">งานพาร์ทไทม์</p>
+        <h4>[ชื่อสถานที่ทำงาน]</h4>
+        <p class="project-card__desc">[เพิ่มรายละเอียดงานพาร์ทไทม์ของคุณที่นี่]</p>
+        <div class="project-meta project-meta--compact">
+          <div><span>บทบาท</span><p>[ระบุบทบาท]</p></div>
+          <div><span>ระยะเวลา</span><p>[ระบุระยะเวลา]</p></div>
+          <div><span>สิ่งที่ได้เรียนรู้</span><p>[ระบุสิ่งที่ได้เรียนรู้]</p></div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <p class="project-card__label">การอบรม / Workshop</p>
+        <h4>[ชื่อการอบรม]</h4>
+        <p class="project-card__desc">[เพิ่มรายละเอียดการอบรมของคุณที่นี่]</p>
+        <div class="project-meta project-meta--compact">
+          <div><span>ผู้จัด</span><p>[ระบุผู้จัดงาน]</p></div>
+          <div><span>ระยะเวลา</span><p>[ระบุระยะเวลา]</p></div>
+          <div><span>สิ่งที่ได้เรียนรู้</span><p>[ระบุสิ่งที่ได้เรียนรู้]</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 7. ACHIEVEMENTS ============ -->
+  <section id="achievements" class="section section--tinted">
+    <div class="section__head reveal">
+      <p class="eyebrow">ACHIEVEMENTS</p>
+      <h2>ความสำเร็จและข้อมูลเพิ่มเติม</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="achieve-grid reveal">
+      <div class="achieve-card achieve-card--placeholder">
+        <span class="achieve-icon" data-icon="certificate"></span>
+        <h4>ใบรับรอง</h4>
+        <p>[เพิ่มใบรับรองของคุณที่นี่]</p>
+      </div>
+      <div class="achieve-card achieve-card--placeholder">
+        <span class="achieve-icon" data-icon="training"></span>
+        <h4>การเข้าร่วมอบรม</h4>
+        <p>[เพิ่มการอบรมของคุณที่นี่]</p>
+      </div>
+      <div class="achieve-card achieve-card--placeholder">
+        <span class="achieve-icon" data-icon="workshop"></span>
+        <h4>Workshop</h4>
+        <p>[เพิ่ม Workshop ของคุณที่นี่]</p>
+      </div>
+      <div class="achieve-card achieve-card--placeholder">
+        <span class="achieve-icon" data-icon="academic"></span>
+        <h4>กิจกรรมทางวิชาการ</h4>
+        <p>[เพิ่มกิจกรรมทางวิชาการของคุณที่นี่]</p>
+      </div>
+      <div class="achieve-card achieve-card--placeholder">
+        <span class="achieve-icon" data-icon="star"></span>
+        <h4>ความสามารถพิเศษ</h4>
+        <p>[เพิ่มความสามารถพิเศษของคุณที่นี่]</p>
+      </div>
+      <div class="achieve-card achieve-card--placeholder">
+        <span class="achieve-icon" data-icon="award"></span>
+        <h4>รางวัล</h4>
+        <p>[เพิ่มรางวัลของคุณที่นี่]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. AI USAGE ============ -->
+  <section id="ai" class="section">
+    <div class="section__head reveal">
+      <p class="eyebrow">PROCESS</p>
+      <h2>การใช้ AI ในการพัฒนาเว็บไซต์</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="ai-layout reveal">
+      <p class="ai-text">
+        เว็บไซต์นี้พัฒนาโดยใช้ AI เป็น <strong>เครื่องมือช่วยเหลือ</strong> ตลอดกระบวนการทำงาน
+        ตั้งแต่การระดมความคิดเพื่อวางโครงสร้างเว็บไซต์ การสร้างแนวคิดตั้งต้น
+        การปรับปรุงถ้อยคำและเนื้อหาให้เป็นธรรมชาติ การช่วยเขียนโค้ด HTML/CSS/JavaScript
+        การช่วยตรวจหาและแก้ไขข้อผิดพลาด การปรับปรุงการแสดงผลให้รองรับหน้าจอ
+        หลากหลายขนาด ไปจนถึงการเสนอแนวคิดด้าน UI/UX
+      </p>
+      <p class="ai-text">
+        อย่างไรก็ตาม ทุกขั้นตอนยังผ่าน<strong>การตรวจสอบ แก้ไข ทดสอบ
+        และตัดสินใจด้วยตนเอง</strong>ของเจ้าของผลงานเสมอ AI จึงทำหน้าที่เป็นผู้ช่วย
+        ไม่ใช่ผู้สร้างผลงานทั้งหมดแต่เพียงผู้เดียว
+      </p>
+
+      <div class="process-flow">
+        <div class="process-step"><span>วางแผน</span></div>
+        <span class="process-arrow">→</span>
+        <div class="process-step"><span>ออกแบบ</span></div>
+        <span class="process-arrow">→</span>
+        <div class="process-step"><span>ใช้ AI ช่วยพัฒนา</span></div>
+        <span class="process-arrow">→</span>
+        <div class="process-step"><span>ตรวจสอบ</span></div>
+        <span class="process-arrow">→</span>
+        <div class="process-step"><span>ปรับปรุง</span></div>
+        <span class="process-arrow">→</span>
+        <div class="process-step"><span>ทดสอบ</span></div>
+        <span class="process-arrow">→</span>
+        <div class="process-step process-step--final"><span>เผยแพร่</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. CONTACT ============ -->
+  <section id="contact" class="section section--dark">
+    <div class="section__head reveal">
+      <p class="eyebrow">GET IN TOUCH</p>
+      <h2>ติดต่อฉัน</h2>
+      <span class="rule rule--light"></span>
+      <p class="contact-lead">สนใจร่วมงานหรือพูดคุยเกี่ยวกับโอกาสฝึกงาน ทักทายกันได้เลย</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <a href="mailto:email@example.com" class="contact-pill" data-copy="[email@example.com]">
+        <span class="info-icon" data-icon="mail"></span> Email
+      </a>
+      <a href="#" class="contact-pill">
+        <span class="info-icon" data-icon="instagram"></span> Instagram
+      </a>
+      <a href="#" class="contact-pill">
+        <span class="info-icon" data-icon="facebook"></span> Facebook
+      </a>
+      <a href="#" class="contact-pill">
+        <span class="info-icon" data-icon="github"></span> GitHub
+      </a>
+    </div>
+
+    <a href="mailto:email@example.com" class="btn btn--light">ส่งอีเมลถึงฉัน</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Star Portfolio. All Rights Reserved.</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="เลื่อนขึ้นด้านบน">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
